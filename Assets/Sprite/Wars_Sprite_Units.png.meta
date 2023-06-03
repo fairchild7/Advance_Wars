@@ -1,0 +1,3348 @@
+fileFormatVersion: 2
+guid: fe4f37e167cb87a428de0767e8f4d76d
+TextureImporter:
+  internalIDToNameTable: []
+  externalObjects: {}
+  serializedVersion: 12
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  vTOnly: 0
+  ignoreMasterTextureLimit: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: 0
+    aniso: 1
+    mipBias: 0
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 16
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  flipbookRows: 1
+  flipbookColumns: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  ignorePngGamma: 0
+  applyGammaDecoding: 0
+  cookieLightType: 0
+  platformSettings:
+  - serializedVersion: 3
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 0
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: Server
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  - serializedVersion: 3
+    buildTarget: WebGL
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+    forceMaximumCompressionQuality_BC6H_BC7: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_0
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1668
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a2bde5f53c5d3064a9db9ec4c869440c
+      internalID: 1784921607
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_1
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 1668
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 44254a0f9ec28e844b05da9298d91830
+      internalID: -856119712
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_2
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 1668
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: efeaa051cc058eb469ee23459d93446f
+      internalID: 1738490109
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_3
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 1660
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cdfdbdd7c33fff6428e5cad34843eb37
+      internalID: -327163730
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_4
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1660
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 24ac9ca9a9b41e741b2de29e9de8ce1e
+      internalID: -2057050937
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_5
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1660
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 909f551433660744e91d39a24bc97431
+      internalID: -974653905
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_6
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 1635
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b39d91e9e8dc02e4abe292ad12712074
+      internalID: -260338573
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_7
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1635
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 357a7f1fe3574844db4a88feef3f7073
+      internalID: 1419739094
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_8
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1635
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 030c33961585a324c9ac2030800d1f46
+      internalID: 1711730037
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_9
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 1611
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 867e313a6cc5440408ab13ba810b78f5
+      internalID: 746158118
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_10
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1611
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1538b076f9ddc6c4da0ae124643d5a73
+      internalID: 1777160333
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_11
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 1611
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4b289c700299f5942b8c97cabc510e78
+      internalID: -1597061115
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_12
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1573
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a22d058b3734e7949b82835c1dbd1dc2
+      internalID: -1749820667
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_13
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1573
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 03cc044dab5b01d4e87e2918b7952b48
+      internalID: 1161985575
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_14
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 1573
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3f6253548badf6448af74ee2c183ebac
+      internalID: -1791047021
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_15
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1660
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dda61adb94ed7d9419683c270b12c253
+      internalID: 357821469
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_16
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 1660
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a32db19b288048b4e845d4f2ff75a97e
+      internalID: 581271513
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_17
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 1660
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fc597b36d96a3e04590f6d5aa34a4780
+      internalID: -1236575027
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_18
+      rect:
+        serializedVersion: 2
+        x: 134
+        y: 1635
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 56a84d283638fb94da9b562ce5a93bea
+      internalID: -1637400875
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_19
+      rect:
+        serializedVersion: 2
+        x: 159
+        y: 1635
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9d31dcd0f580f84419bc5ae4c6a0bc9b
+      internalID: 376691531
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_20
+      rect:
+        serializedVersion: 2
+        x: 184
+        y: 1635
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2b8eda7fbbe30d41aa54fe380960fad
+      internalID: -479144395
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_21
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1611
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d450ebaa2a417cd44b68fc8b9add19bb
+      internalID: 1280586518
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_22
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 1611
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a365aeabcc715e344b988533da94b90d
+      internalID: -1865703737
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_23
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 1611
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31f0209ad248595459ce251ddb20b86d
+      internalID: 1854399334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_24
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1459
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7054370654814944faa761651fd21d1d
+      internalID: 72616420
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_25
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 1459
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f3848f929a153cd43949abb6af4b6c1a
+      internalID: -853771337
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_26
+      rect:
+        serializedVersion: 2
+        x: 39
+        y: 1459
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b83f80f621004fe4b9659d4c096e5460
+      internalID: 1388320746
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_27
+      rect:
+        serializedVersion: 2
+        x: 138
+        y: 1275
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c0ec6657ea795094199d3dea05eeb16c
+      internalID: -1269440369
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_28
+      rect:
+        serializedVersion: 2
+        x: 163
+        y: 1276
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c3b4f8bb6445eb64a9e3d838b33057f9
+      internalID: 358952771
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_29
+      rect:
+        serializedVersion: 2
+        x: 188
+        y: 1276
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 990f8cb53c119064689865163758d24e
+      internalID: 344354011
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_30
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1251
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 139266027f34d834780364044fb155fa
+      internalID: 904113717
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_31
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 1251
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2a3b5820c56d68f4297f35e51b53b969
+      internalID: -793546435
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_32
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 1251
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 812f9f1d64c1ee84eb9c2c7d1024bf63
+      internalID: -914307079
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_33
+      rect:
+        serializedVersion: 2
+        x: 139
+        y: 1226
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ac2ed3b5450cb3643b5a78f510de0859
+      internalID: -69413560
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_34
+      rect:
+        serializedVersion: 2
+        x: 164
+        y: 1226
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 291cd54d3580e984595990a89d6151fa
+      internalID: -1171450647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_35
+      rect:
+        serializedVersion: 2
+        x: 189
+        y: 1226
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 76796489c5f42fc46b83493ff8d53ac4
+      internalID: -1352978394
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_36
+      rect:
+        serializedVersion: 2
+        x: 3
+        y: 1364
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88fa23c22d52050418973473d826086b
+      internalID: -1221287718
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_37
+      rect:
+        serializedVersion: 2
+        x: 20
+        y: 1364
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eece968a36f298f459bcede4ed0e1cd0
+      internalID: 1638315338
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_38
+      rect:
+        serializedVersion: 2
+        x: 37
+        y: 1364
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d0dd69ed27395c49b8cbfe5e428bb68
+      internalID: 962594612
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_39
+      rect:
+        serializedVersion: 2
+        x: 214
+        y: 1430
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b9aa443c60c21364287a39b50d87b0c4
+      internalID: -778402677
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_40
+      rect:
+        serializedVersion: 2
+        x: 239
+        y: 1430
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ba2647bf7a109a340a7dc4b8bb79772c
+      internalID: -1398965997
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_41
+      rect:
+        serializedVersion: 2
+        x: 264
+        y: 1430
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 61b4482dffefed74e9b133463ba6f773
+      internalID: -1679586076
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_42
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1405
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01ea0918f29a56242bab23a9987c1eab
+      internalID: -277065532
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_43
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 1405
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e7745c1d3550467408e33a294102e559
+      internalID: 743519593
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_44
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1405
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f6e7a83db9c5e504c94ad84dc3130939
+      internalID: -1512059960
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_45
+      rect:
+        serializedVersion: 2
+        x: 216
+        y: 1380
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2781d002fd586c54cab1fda82e775b71
+      internalID: -587817093
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_46
+      rect:
+        serializedVersion: 2
+        x: 241
+        y: 1380
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc988fca6dd8dea458a336963fc8ffed
+      internalID: 554321320
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_47
+      rect:
+        serializedVersion: 2
+        x: 266
+        y: 1380
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 295be87c785fa3548ab8a0c939a05d2f
+      internalID: -1381934146
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_48
+      rect:
+        serializedVersion: 2
+        x: 4
+        y: 1478
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2b4b906d0a7ef0a4eb8466267d793e26
+      internalID: -147914053
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_49
+      rect:
+        serializedVersion: 2
+        x: 21
+        y: 1478
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd9f7b332d6549c45abb4518f35aac99
+      internalID: -276632265
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_50
+      rect:
+        serializedVersion: 2
+        x: 38
+        y: 1478
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b57015acdbb0edf44b48876d9ac3d7c3
+      internalID: 1679234719
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_51
+      rect:
+        serializedVersion: 2
+        x: 61
+        y: 1276
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5841f4b6d132fed4ebb392b4999b3764
+      internalID: 525890163
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_52
+      rect:
+        serializedVersion: 2
+        x: 86
+        y: 1276
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75e5592daa97d304386c7c6ad729d41d
+      internalID: -900088437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_53
+      rect:
+        serializedVersion: 2
+        x: 111
+        y: 1276
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 422d53d2bf0da894991c545005b4becc
+      internalID: 116210274
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_54
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 1252
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: adb244fb26d1b5446b34651273e5b5cc
+      internalID: -1904753287
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_55
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1252
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4b04d6bbfff724a94a003cb2fda45f
+      internalID: 1805986789
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_56
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1252
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c59c6e266bb507345a0c4030f0d5e7ff
+      internalID: -538263036
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_57
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 1226
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 568cfeffa2a8fe94d9ae53b4190fab30
+      internalID: -856922501
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_58
+      rect:
+        serializedVersion: 2
+        x: 87
+        y: 1226
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 10f0ca50cf18b864c9a71ed1c4c5d0bf
+      internalID: -1395660831
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_59
+      rect:
+        serializedVersion: 2
+        x: 112
+        y: 1226
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6ff1e852b85380e44af5a82c2bbb59e9
+      internalID: -2058448541
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_60
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1668
+        width: 14
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 322347914b770e94398cb2e11e58f357
+      internalID: 1057717653
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_61
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 1668
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 665b4b800ba927540b5b2b068757724e
+      internalID: 1239581766
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_62
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 1668
+        width: 14
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 49117f6fb99b7834db7206a9ea07bc5e
+      internalID: 458343800
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_63
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1660
+        width: 15
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3826ac4d88fb9d74a91071a7eefd255c
+      internalID: 528227787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_64
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 1660
+        width: 15
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc9499752e4791c4590d7c0529aca5a5
+      internalID: 692878144
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_65
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 1660
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d39af431db34c00478afa820be580d78
+      internalID: -1815266212
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_66
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1635
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7cbb4aed276c20d4a897f7bea1fbaac5
+      internalID: -1900142647
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_67
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 1635
+        width: 11
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd26dcf466078bd4b974ddb3a38db3e6
+      internalID: -1917673192
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_68
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 1635
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 88105a01122f6a246aa4f607f290da73
+      internalID: 252401240
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_69
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1611
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9cf8bc08dfc232440b0c9cf45d581299
+      internalID: 285756397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_70
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 1611
+        width: 13
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: be3da3af87e2c3c408a9a19d808621ca
+      internalID: -1474443097
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_71
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1611
+        width: 13
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bb43900a2e731814798baad76720ee44
+      internalID: -1233771808
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_72
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1573
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 133743dc1ad26b041a67ed539a4aeed1
+      internalID: 1198664576
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_73
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 1573
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 748431311e9ea954698d99ba865fb8a1
+      internalID: -862422852
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_74
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 1573
+        width: 16
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47dde99fbb1b1d46bae848eb1e00090
+      internalID: -490504877
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_75
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1660
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57cc5e299210bf04abfa30fd6823030a
+      internalID: -980089508
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_76
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 1660
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2d9d3c683f1fa74e9ca9981ca8f8e0e
+      internalID: 962492957
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_77
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 1660
+        width: 16
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6a2d3a85cdc96304db3fd29c6a4a3f39
+      internalID: -2108656787
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_78
+      rect:
+        serializedVersion: 2
+        x: 523
+        y: 1635
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4267ed1624f8fab4d868373ecc5bd5be
+      internalID: -1032782661
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_79
+      rect:
+        serializedVersion: 2
+        x: 548
+        y: 1635
+        width: 16
+        height: 18
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0507d3de21faae74ab7f842e115eb580
+      internalID: -229092303
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_80
+      rect:
+        serializedVersion: 2
+        x: 573
+        y: 1635
+        width: 16
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 30f4d98cde6cd5941b97a67a7b22aa15
+      internalID: 1084252896
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_81
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1611
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2f801738f9113d54a9d9578e5034b745
+      internalID: -910544694
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_82
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 1611
+        width: 14
+        height: 20
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8883bbe4e9a9061469cb7de06dfc15b5
+      internalID: 526695582
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_83
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 1611
+        width: 14
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8d2721eee78fbf445a54d51dcf103255
+      internalID: 1011090963
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_84
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1478
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1e8821344f7e0714f87836996e6b5269
+      internalID: 1411670564
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_85
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 1478
+        width: 13
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9fd7e883dad9be14fb4d8cbb8ce6b63d
+      internalID: 684278819
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_86
+      rect:
+        serializedVersion: 2
+        x: 427
+        y: 1478
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3a84e93192858f248859379f0b27442b
+      internalID: 850005942
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_87
+      rect:
+        serializedVersion: 2
+        x: 450
+        y: 1276
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c72401b60c0f61640bc8aa2c238b2ea5
+      internalID: 1325591950
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_88
+      rect:
+        serializedVersion: 2
+        x: 475
+        y: 1276
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4a7f163a5977e0c4d95d42a20e870ae9
+      internalID: -844247440
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_89
+      rect:
+        serializedVersion: 2
+        x: 500
+        y: 1276
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 95165deae5138f84ba16da7e406f0d7c
+      internalID: -1272758496
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_90
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1252
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01b2e5ebca2390e4a8e6a1c80b337697
+      internalID: -1095420482
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_91
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 1252
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e27e1585f843a0849822938d6f6e28fc
+      internalID: -585291670
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_92
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 1252
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 29530fa5dce12ca40a8e43bef631777c
+      internalID: -1149507728
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_93
+      rect:
+        serializedVersion: 2
+        x: 451
+        y: 1226
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8ccbd8293f494b44487ef50f0d6771fb
+      internalID: 645853455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_94
+      rect:
+        serializedVersion: 2
+        x: 476
+        y: 1226
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ae05c628023e54440aba83bf67761f1d
+      internalID: 1012770884
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_95
+      rect:
+        serializedVersion: 2
+        x: 501
+        y: 1226
+        width: 11
+        height: 17
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 507d0f3d8e5bb9248b7ec37eeb198a7b
+      internalID: -217297033
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_96
+      rect:
+        serializedVersion: 2
+        x: 393
+        y: 1459
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5006bc7183d56d94c9469abc77a6f5dd
+      internalID: 1472201874
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_97
+      rect:
+        serializedVersion: 2
+        x: 410
+        y: 1459
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8c2cc80087a339e42a6e3a2507468377
+      internalID: 476334202
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_98
+      rect:
+        serializedVersion: 2
+        x: 428
+        y: 1459
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 5a9fcdf3685f34b4c8963c32fe9f43ea
+      internalID: 4546468
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_99
+      rect:
+        serializedVersion: 2
+        x: 527
+        y: 1276
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 79dd120d8338ba040aba73eda10bb24a
+      internalID: -649995407
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_100
+      rect:
+        serializedVersion: 2
+        x: 552
+        y: 1276
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9884f269055564b4d9edcf8f2b520fb0
+      internalID: 329675646
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_101
+      rect:
+        serializedVersion: 2
+        x: 577
+        y: 1276
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: cc5f23de0bc21d8458076c7011f1636a
+      internalID: -2114805068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_102
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1251
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 81b9796cd03fa884dac917828939e32e
+      internalID: -1111020172
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_103
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 1251
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3466a92e5aea60d40b93af4bdf9133da
+      internalID: 472813343
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_104
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 1251
+        width: 11
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7f21c27fcf45b3440a0e16dfb06db3d3
+      internalID: -767854812
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_105
+      rect:
+        serializedVersion: 2
+        x: 528
+        y: 1226
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 767bb88a321da9141aac24d857da56c7
+      internalID: -418419792
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_106
+      rect:
+        serializedVersion: 2
+        x: 553
+        y: 1226
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0d9a1450743160548bf8107160d57e71
+      internalID: 619470897
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_107
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 1226
+        width: 11
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 21b33e65e92c6de4abadaa946ac9a514
+      internalID: -2096377248
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_108
+      rect:
+        serializedVersion: 2
+        x: 392
+        y: 1364
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee1323a3284191a4484e5f7bd1f0a96d
+      internalID: -1403004899
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_109
+      rect:
+        serializedVersion: 2
+        x: 409
+        y: 1364
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f2740df7f89858c4786528bd070eacf8
+      internalID: 606713935
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_110
+      rect:
+        serializedVersion: 2
+        x: 426
+        y: 1364
+        width: 15
+        height: 14
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd5289eacd8499d4b9d64c72e4d73489
+      internalID: 386832310
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_111
+      rect:
+        serializedVersion: 2
+        x: 603
+        y: 1430
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a11438e66ca45f84096c77ba4abbf6a0
+      internalID: -1046487392
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_112
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 1430
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57d1651bbd196f0479612bad1ade791f
+      internalID: 303555472
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_113
+      rect:
+        serializedVersion: 2
+        x: 653
+        y: 1430
+        width: 15
+        height: 15
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: e5d4d119db9da5249b919a7584708986
+      internalID: 1925411334
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_114
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1405
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 544c99d50ac07684a80dd1f91412a192
+      internalID: -24560326
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_115
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 1405
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: c9f059ff0bb62ec4b963ae1216bfed67
+      internalID: -1695859926
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_116
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 1405
+        width: 11
+        height: 16
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a63bafd6d2a7d574085c047acd2bf1f0
+      internalID: -2053624709
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_117
+      rect:
+        serializedVersion: 2
+        x: 605
+        y: 1380
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: dc6836e0af7cf2b4c9eac75e624b5a9f
+      internalID: 99115849
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_118
+      rect:
+        serializedVersion: 2
+        x: 630
+        y: 1380
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 75be190bf3dc8e649bd2b8c874b310bc
+      internalID: -313798242
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_119
+      rect:
+        serializedVersion: 2
+        x: 655
+        y: 1380
+        width: 11
+        height: 19
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ffe9251548c11904b8e6b6b2c8e9d2e5
+      internalID: 1457179148
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_120
+      rect:
+        serializedVersion: 2
+        x: 556
+        y: 548
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3d4940a416c96e04d91935c79648729e
+      internalID: 1752801038
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_121
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 548
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 32e7ecbca8601bc4cbbebae32d4f5809
+      internalID: -147004669
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_122
+      rect:
+        serializedVersion: 2
+        x: 574
+        y: 548
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: fd5adcd75d2d8ba40976364704efdd11
+      internalID: 1891133446
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_123
+      rect:
+        serializedVersion: 2
+        x: 583
+        y: 548
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: caa56af1d15c4834ea6868ea1cbbd892
+      internalID: -1640650906
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_124
+      rect:
+        serializedVersion: 2
+        x: 592
+        y: 548
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6c343d2d3d7bc484683295365f793088
+      internalID: 1076918854
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_125
+      rect:
+        serializedVersion: 2
+        x: 601
+        y: 548
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f851179472552a943ae5be5dde9b89f9
+      internalID: 1863664294
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_126
+      rect:
+        serializedVersion: 2
+        x: 610
+        y: 548
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8856746ef314cc641b191fee62a71e71
+      internalID: -1590322636
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_127
+      rect:
+        serializedVersion: 2
+        x: 619
+        y: 548
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1c07b37d278e06648838f9de6a46a0c1
+      internalID: 252378841
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_128
+      rect:
+        serializedVersion: 2
+        x: 628
+        y: 548
+        width: 8
+        height: 7
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b2807feb82940b946b2f31d45650a7f7
+      internalID: 663786732
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_129
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 547
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 089d4627cb29def4aaf31499b95737be
+      internalID: 126865397
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_130
+      rect:
+        serializedVersion: 2
+        x: 529
+        y: 538
+        width: 8
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 93adb26c3bd22b048ac63d82c0c0bb0c
+      internalID: -1831193358
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_131
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 464
+        width: 12
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 28a8f97b904449849ad77b1970b5b324
+      internalID: 1542417345
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_132
+      rect:
+        serializedVersion: 2
+        x: 565
+        y: 450
+        width: 12
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 31994a75f49aa084ea7508a64befb587
+      internalID: -379027894
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_133
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 464
+        width: 13
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7431fd298d9306f4d8392b4dc8004155
+      internalID: 2099847022
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_134
+      rect:
+        serializedVersion: 2
+        x: 578
+        y: 450
+        width: 13
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bd72c328c6dc6894e9f8ae97f025da84
+      internalID: 776704826
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_135
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 481
+        width: 9
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 08fe8fc53e25eb5498b058dadbc515e7
+      internalID: -900411381
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_136
+      rect:
+        serializedVersion: 2
+        x: 599
+        y: 464
+        width: 9
+        height: 16
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3cf32824c64be834ebb9850ffd76563f
+      internalID: 2099826850
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_137
+      rect:
+        serializedVersion: 2
+        x: 596
+        y: 450
+        width: 15
+        height: 13
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1cf7b096e2218c14ba6b82c89c9976cc
+      internalID: 1090056949
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_138
+      rect:
+        serializedVersion: 2
+        x: 613
+        y: 481
+        width: 15
+        height: 12
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 686c15a67292e5749818f55ed1d075f6
+      internalID: 1708801073
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_139
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 466
+        width: 9
+        height: 14
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68787085fd1adf04c9452e0a16bcdf14
+      internalID: -1313386708
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_140
+      rect:
+        serializedVersion: 2
+        x: 633
+        y: 464
+        width: 12
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6eab20c94783f754694ed136225ffbca
+      internalID: 849812886
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_141
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 467
+        width: 13
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ca772b87753637c4e8d87ce8e9ce2018
+      internalID: -743113869
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_142
+      rect:
+        serializedVersion: 2
+        x: 616
+        y: 450
+        width: 12
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 52132f5aad130214ba161754bf81aa80
+      internalID: 560063423
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_143
+      rect:
+        serializedVersion: 2
+        x: 629
+        y: 450
+        width: 16
+        height: 9
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 6cdcaea927e872449b2d58636bee2d89
+      internalID: 41221447
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_144
+      rect:
+        serializedVersion: 2
+        x: 646
+        y: 447
+        width: 13
+        height: 15
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 572cacd9da873bc4d91816e250823db8
+      internalID: -241838216
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Wars_Sprite_Units_145
+      rect:
+        serializedVersion: 2
+        x: 582
+        y: 495
+        width: 2
+        height: 2
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ce04490d31e64e041a1cff79c292aaf5
+      internalID: -664595914
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: 5e97eb03825dee720800000000000000
+    internalID: 0
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+    secondaryTextures: []
+    nameFileIdTable:
+      341552482_990262565298141_2436159045404556273_n_0: -645492878
+      Wars_Sprite_Units_0: 1784921607
+      Wars_Sprite_Units_1: 345099469
+      Wars_Sprite_Units_10: 1777160333
+      Wars_Sprite_Units_100: 329675646
+      Wars_Sprite_Units_101: -2114805068
+      Wars_Sprite_Units_102: -1111020172
+      Wars_Sprite_Units_103: 472813343
+      Wars_Sprite_Units_104: -767854812
+      Wars_Sprite_Units_105: -418419792
+      Wars_Sprite_Units_106: 619470897
+      Wars_Sprite_Units_107: -2096377248
+      Wars_Sprite_Units_108: -1403004899
+      Wars_Sprite_Units_109: 606713935
+      Wars_Sprite_Units_11: -1597061115
+      Wars_Sprite_Units_110: 386832310
+      Wars_Sprite_Units_111: -1046487392
+      Wars_Sprite_Units_112: 303555472
+      Wars_Sprite_Units_113: 1925411334
+      Wars_Sprite_Units_114: -24560326
+      Wars_Sprite_Units_115: -1695859926
+      Wars_Sprite_Units_116: -2053624709
+      Wars_Sprite_Units_117: 99115849
+      Wars_Sprite_Units_118: -313798242
+      Wars_Sprite_Units_119: 1457179148
+      Wars_Sprite_Units_12: -1749820667
+      Wars_Sprite_Units_120: 1752801038
+      Wars_Sprite_Units_121: -147004669
+      Wars_Sprite_Units_122: 1891133446
+      Wars_Sprite_Units_123: -1640650906
+      Wars_Sprite_Units_124: 1076918854
+      Wars_Sprite_Units_125: 1863664294
+      Wars_Sprite_Units_126: -1590322636
+      Wars_Sprite_Units_127: 252378841
+      Wars_Sprite_Units_128: 663786732
+      Wars_Sprite_Units_129: 126865397
+      Wars_Sprite_Units_13: 1161985575
+      Wars_Sprite_Units_130: -1831193358
+      Wars_Sprite_Units_131: 1542417345
+      Wars_Sprite_Units_132: 1269937893
+      Wars_Sprite_Units_133: 1065091274
+      Wars_Sprite_Units_134: -379027894
+      Wars_Sprite_Units_135: 2099847022
+      Wars_Sprite_Units_136: 776704826
+      Wars_Sprite_Units_137: -900411381
+      Wars_Sprite_Units_138: 2099826850
+      Wars_Sprite_Units_139: 1090056949
+      Wars_Sprite_Units_14: -1791047021
+      Wars_Sprite_Units_140: 1708801073
+      Wars_Sprite_Units_141: -1313386708
+      Wars_Sprite_Units_142: 849812886
+      Wars_Sprite_Units_143: -743113869
+      Wars_Sprite_Units_144: 560063423
+      Wars_Sprite_Units_145: 41221447
+      Wars_Sprite_Units_15: 1346374184
+      Wars_Sprite_Units_16: 357821469
+      Wars_Sprite_Units_17: 581271513
+      Wars_Sprite_Units_18: -1236575027
+      Wars_Sprite_Units_19: -1637400875
+      Wars_Sprite_Units_2: -856119712
+      Wars_Sprite_Units_20: 376691531
+      Wars_Sprite_Units_21: -479144395
+      Wars_Sprite_Units_22: 1280586518
+      Wars_Sprite_Units_23: -1865703737
+      Wars_Sprite_Units_24: 1854399334
+      Wars_Sprite_Units_25: 72616420
+      Wars_Sprite_Units_26: -853771337
+      Wars_Sprite_Units_27: 1388320746
+      Wars_Sprite_Units_28: -1269440369
+      Wars_Sprite_Units_29: 358952771
+      Wars_Sprite_Units_3: -327163730
+      Wars_Sprite_Units_30: 344354011
+      Wars_Sprite_Units_31: 904113717
+      Wars_Sprite_Units_32: -793546435
+      Wars_Sprite_Units_33: -914307079
+      Wars_Sprite_Units_34: -69413560
+      Wars_Sprite_Units_35: -1171450647
+      Wars_Sprite_Units_36: -1352978394
+      Wars_Sprite_Units_37: -1221287718
+      Wars_Sprite_Units_38: 1638315338
+      Wars_Sprite_Units_39: 962594612
+      Wars_Sprite_Units_4: -2057050937
+      Wars_Sprite_Units_40: -778402677
+      Wars_Sprite_Units_41: -1398965997
+      Wars_Sprite_Units_42: -1679586076
+      Wars_Sprite_Units_43: -277065532
+      Wars_Sprite_Units_44: 743519593
+      Wars_Sprite_Units_45: -1512059960
+      Wars_Sprite_Units_46: -587817093
+      Wars_Sprite_Units_47: -147914053
+      Wars_Sprite_Units_48: -1381934146
+      Wars_Sprite_Units_49: -147914053
+      Wars_Sprite_Units_5: -974653905
+      Wars_Sprite_Units_50: -276632265
+      Wars_Sprite_Units_51: 1679234719
+      Wars_Sprite_Units_52: 525890163
+      Wars_Sprite_Units_53: -900088437
+      Wars_Sprite_Units_54: 116210274
+      Wars_Sprite_Units_55: -1904753287
+      Wars_Sprite_Units_56: 1805986789
+      Wars_Sprite_Units_57: -538263036
+      Wars_Sprite_Units_58: -856922501
+      Wars_Sprite_Units_59: -1395660831
+      Wars_Sprite_Units_6: -260338573
+      Wars_Sprite_Units_60: 1057717653
+      Wars_Sprite_Units_61: 1239581766
+      Wars_Sprite_Units_62: 458343800
+      Wars_Sprite_Units_63: 528227787
+      Wars_Sprite_Units_64: 692878144
+      Wars_Sprite_Units_65: -1815266212
+      Wars_Sprite_Units_66: -1900142647
+      Wars_Sprite_Units_67: -1917673192
+      Wars_Sprite_Units_68: 252401240
+      Wars_Sprite_Units_69: 285756397
+      Wars_Sprite_Units_7: 1419739094
+      Wars_Sprite_Units_70: -1474443097
+      Wars_Sprite_Units_71: -1233771808
+      Wars_Sprite_Units_72: 1198664576
+      Wars_Sprite_Units_73: -862422852
+      Wars_Sprite_Units_74: -490504877
+      Wars_Sprite_Units_75: -980089508
+      Wars_Sprite_Units_76: 962492957
+      Wars_Sprite_Units_77: -2108656787
+      Wars_Sprite_Units_78: -1032782661
+      Wars_Sprite_Units_79: -229092303
+      Wars_Sprite_Units_8: 1711730037
+      Wars_Sprite_Units_80: 1084252896
+      Wars_Sprite_Units_81: -910544694
+      Wars_Sprite_Units_82: 526695582
+      Wars_Sprite_Units_83: 1011090963
+      Wars_Sprite_Units_84: 1411670564
+      Wars_Sprite_Units_85: 684278819
+      Wars_Sprite_Units_86: 850005942
+      Wars_Sprite_Units_87: 1325591950
+      Wars_Sprite_Units_88: -844247440
+      Wars_Sprite_Units_89: -1272758496
+      Wars_Sprite_Units_9: 746158118
+      Wars_Sprite_Units_90: -1095420482
+      Wars_Sprite_Units_91: -585291670
+      Wars_Sprite_Units_92: -1149507728
+      Wars_Sprite_Units_93: 645853455
+      Wars_Sprite_Units_94: 1012770884
+      Wars_Sprite_Units_95: -217297033
+      Wars_Sprite_Units_96: 1472201874
+      Wars_Sprite_Units_97: 476334202
+      Wars_Sprite_Units_98: 4546468
+      Wars_Sprite_Units_99: -649995407
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
