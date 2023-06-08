@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 4697310955671085535}
   m_Layer: 8
   m_Name: Blue_Cannon
-  m_TagString: Untagged
+  m_TagString: Cannon
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

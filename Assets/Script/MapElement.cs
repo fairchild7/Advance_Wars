@@ -29,7 +29,7 @@ public class MapElement : MonoBehaviour
         RemoveObjectFromGrid();
         MoveTo(targetPosX, targetPosY);
         MoveObject();
-        animator.Play("Blue_Infantry_Idle");
+        //animator.Play("Blue_Infantry_Idle");
     }
 
     //Not working
@@ -58,7 +58,7 @@ public class MapElement : MonoBehaviour
     private void MoveObject()
     {
         Vector3 worldPosition = new Vector3(x_pos * 1f + 0.5f, y_pos * 1f + 0.5f, -0.5f);
-        CheckMoveDirection(worldPosition);
+        //CheckMoveDirection(worldPosition);
         StartCoroutine(MoveAnimation(worldPosition));
     }
     

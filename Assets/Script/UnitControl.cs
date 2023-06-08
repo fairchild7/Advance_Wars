@@ -10,7 +10,7 @@ public class UnitControl : MonoBehaviour
     [SerializeField] Tilemap highlightTilemap;
     [SerializeField] TileBase highlightTile;
     [SerializeField] GridManager gridManager;
-
+ 
     PathFinding pathFinding;
     Unit selectedUnit;
 
@@ -28,15 +28,16 @@ public class UnitControl : MonoBehaviour
     {
         Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
         Vector3Int clickPosition = targetTilemap.WorldToCell(worldPoint);
-
         if (Input.GetMouseButtonDown(1))
         {
+            Debug.Log("Right " + clickPosition.x + " " + clickPosition.y);
             highlightTilemap.ClearAllTiles();
             if (gridManager.CheckPosition(clickPosition.x, clickPosition.y) == false)
             {
                 return;
             }
             selectedUnit = gridManager.GetUnit(clickPosition.x, clickPosition.y);
+            if (selectedUnit == null) Debug.Log("Fking null");
             if (selectedUnit != null)
             {
                 List<PathNode> toHighlight = new List<PathNode>();
@@ -52,12 +53,14 @@ public class UnitControl : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            Debug.Log("Left " + clickPosition.x + " " + clickPosition.y);
             if (selectedUnit == null)
             {
                 return;
             }
             highlightTilemap.ClearAllTiles();
 
+            Debug.Log(selectedUnit.unitType);
             List<PathNode> path = pathFinding.TrackBackPath(selectedUnit, clickPosition.x, clickPosition.y);
 
             if (path != null)

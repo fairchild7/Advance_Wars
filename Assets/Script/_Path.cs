@@ -54,6 +54,7 @@ public class _Path : MonoBehaviour
         }
     }
 
+    /*
     public void FindArea(GameInformation.Unit unit, int move, float x, float y)
     {
         if (move < 0)
@@ -71,6 +72,7 @@ public class _Path : MonoBehaviour
                 FindArea(unit, move - 1, x, y - 1);
         }
     }
+    */
 
     public void DrawArea()
     {
@@ -106,7 +108,7 @@ public class _Path : MonoBehaviour
                 //return;
             }
             List<Vector2> path = new List<Vector2>();
-            FindPath(Manager.selectedX, Manager.selectedY, Manager.unit.move, path);
+            //FindPath(Manager.selectedX, Manager.selectedY, Manager.unit.move, path);
             int min = 100;
             for (int i = 0; i < listListPaths.Count; i++)
             {

@@ -12,18 +12,6 @@ public class GridManager : MonoBehaviour
 
     [SerializeField] TileSet tileSet;
 
- 
-    //GameInformation gameInfo = new GameInformation();
-    //public int defense;
-    //public int passability;
-    //public int grassEnum = (int)GameInformation.Environment.grass; 
-
-    // Start is called before the first frame update
-    //private void Awake()
-    //{
-    //defense = gameInfo.defenseValue[grassEnum];
-    //passability = gameInfo.environmentPassability[grassEnum];
-    //}
     private void Awake()
     {
 

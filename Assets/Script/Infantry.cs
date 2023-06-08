@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class Infantry : MonoBehaviour, IUnit, ICapture
+public class Infantry : MonoBehaviour, IUnit
 {
+    /*
     public int move { get; set; }
     public int hp { get; set; }
     public int passability { get; set; }
     public bool isMoved { get; set; }
-    public GameInformation.Unit unit { get; set; }
+    //public GameInformation.Unit unit { get; set; }
     public Manager manager { get; set; }
     public Animation anim { get; set; }
     public SpriteRenderer sprCapt { get; set; }
@@ -24,10 +25,10 @@ public class Infantry : MonoBehaviour, IUnit, ICapture
         Manager manager = new Manager();
         Animation anim = new Animation();
         refPath = newObj.AddComponent<_Path>();
-        unit = GameInformation.Unit.Infantry;
-        move = gameInfo.moveRange[(int)unit];
+        //unit = GameInformation.Unit.Infantry;
+        //move = gameInfo.moveRange[(int)unit];
         hp = 10;
-        passability = gameInfo.unitPassability[(int)unit];
+        //passability = gameInfo.unitPassability[(int)unit];
         isMoved = false;
         sprCapt = transform.GetChild(0).GetComponent<SpriteRenderer>();
         sprHp = transform.GetChild(1).GetComponent<SpriteRenderer>();
@@ -58,7 +59,7 @@ public class Infantry : MonoBehaviour, IUnit, ICapture
             if (hit.collider != null)
             {
                 Debug.Log(refPath);
-                refPath.FindArea(unit, move, gameObject.transform.position.x, gameObject.transform.position.y);
+                //refPath.FindArea(unit, move, gameObject.transform.position.x, gameObject.transform.position.y);
                 refPath.DrawArea();
             }
         }
@@ -149,5 +150,5 @@ public class Infantry : MonoBehaviour, IUnit, ICapture
     public bool UpdateHp()
     {
         return true;
-    }
+    }*/
 }

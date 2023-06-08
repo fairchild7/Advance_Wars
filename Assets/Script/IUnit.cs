@@ -4,11 +4,12 @@ using UnityEngine;
 
 public interface IUnit
 {
+    /*
     int hp { get; set; }
     int passability { get; set; }
     int move { get; set; }
     bool isMoved { get; set; }
-    GameInformation.Unit unit { get; set; }
+    //GameInformation.Unit unit { get; set; }
     Manager manager { get; set; }
     Animation anim { get; set; }
     SpriteRenderer sprHp { get; set; }
@@ -22,5 +23,5 @@ public interface IUnit
     void IntToSprite();
     void MoveOnClick();
     IEnumerator MoveAnim();
-
+    */
 }
