@@ -9,6 +9,7 @@ TagManager:
   - Small_Tank
   - Cannon
   - Recon
+  - Highlight
   layers:
   - Default
   - TransparentFX
@@ -17,8 +18,8 @@ TagManager:
   - Water
   - UI
   - Raycast
-  - Red Unit
-  - Blue Unit
+  - RedUnit
+  - BlueUnit
   - 
   - 
   - 

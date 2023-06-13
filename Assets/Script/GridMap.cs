@@ -35,16 +35,6 @@ public class GridMap : MonoBehaviour
         this.height = height;
     }
 
-    internal void ClearUnit(int x_pos, int y_pos)
-    {
-        grid[x_pos, y_pos].unit = null;
-    }
-
-    internal void SetUnit(MapElement mapElement, int x_pos, int y_pos)
-    {
-        grid[x_pos, y_pos].unit = mapElement.GetComponent<Unit>();
-    }
-
     public void SetTile(int x, int y, int to)
     {
         if (CheckPosition(x, y) == false)
@@ -85,8 +75,18 @@ public class GridMap : MonoBehaviour
         return grid[xPos, yPos].tileId >= 0;
     }
 
+    internal void SetUnit(MapElement mapElement, int x_pos, int y_pos)
+    {
+        grid[x_pos, y_pos].unit = mapElement.GetComponent<Unit>();
+    }
+
     public Unit GetUnit(int x, int y)
     {
         return grid[x, y].unit;
+    }
+
+    internal void ClearUnit(int x_pos, int y_pos)
+    {
+        grid[x_pos, y_pos].unit = null;
     }
 }
