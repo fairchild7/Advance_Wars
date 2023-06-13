@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 2660750114213834904}
   - component: {fileID: 5038574214554564147}
   - component: {fileID: 4272138028025812583}
+  - component: {fileID: 1261172178}
+  - component: {fileID: 1261172179}
+  - component: {fileID: 1261172180}
   m_Layer: 8
   m_Name: Blue_Artillery
   m_TagString: Artillery
@@ -108,6 +111,51 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &1261172178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4492693870785735831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89f258eb51d1cb54bb071d3a6d14a90b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  unitMoveSpeed: 5
+--- !u!114 &1261172179
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4492693870785735831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7998fd582e10e1469311e9da7562041, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Name: 
+  moveDistance: 0
+  attackRange: 0
+  unitPassability: 0
+  isMoved: 0
+  isSelected: 0
+  unitType: 0
+  unitColor: 0
+--- !u!114 &1261172180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4492693870785735831}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fdc46e26cb8965d48b087f9edf6a6232, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &7083299925899511392
 PrefabInstance:
   m_ObjectHideFlags: 0

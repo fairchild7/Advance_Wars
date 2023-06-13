@@ -13,6 +13,12 @@ public class GameInformation
         { "Recon", UnitType.Recon }
     };
 
+    private Dictionary<string, UnitColor> objectToColor = new Dictionary<string, UnitColor>
+    {
+        { "RedUnit", UnitColor.Red },
+        { "BlueUnit", UnitColor.Blue }
+    };
+
     //Defense value of environments
     public int[] defenseValue = new int[] { 0, 0, 1, 2, 3, 4 };
 
@@ -53,6 +59,12 @@ public class GameInformation
         Cannon,
         Recon,
     }
+    public enum UnitColor
+    {
+        Red,
+        Blue,
+        Neutral,
+    }
 
     public UnitType GetUnitTypeFromName(string objectName)
     {
@@ -61,5 +73,14 @@ public class GameInformation
             return unitType;
         }
         return UnitType.Infantry; //return Infantry if not find, notice this
+    }
+
+    public UnitColor GetUnitColor(string objectLayer)
+    {
+        if (objectToColor.TryGetValue(objectLayer, out UnitColor unitColor))
+        {
+            return unitColor;
+        }
+        return UnitColor.Neutral;
     }
 }

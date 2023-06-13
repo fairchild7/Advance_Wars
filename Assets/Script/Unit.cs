@@ -10,25 +10,45 @@ public class Unit : MonoBehaviour
     public int unitPassability;
     public bool isMoved = false;
     public bool isSelected = false;
+
+    public Color originalColor;
     SpriteRenderer spriteHp;
     GameInformation gameInfo;
     public GameInformation.UnitType unitType;
+    public GameInformation.UnitColor unitColor;
 
     private void Awake()
     {
         gameInfo = new GameInformation();
         GetUnitType();
+        GetUnitColor();
         moveDistance = GetUnitMoveRange();
         attackRange = GetUnitAttackRange();
         unitPassability = GetUnitPassability();
+
         spriteHp = transform.GetChild(0).GetComponent<SpriteRenderer>();
         spriteHp.gameObject.SetActive(false);
+        originalColor = GetComponent<SpriteRenderer>().color;
     }
 
     public void GetUnitType()
     {
         string type = gameObject.tag;
         unitType = gameInfo.GetUnitTypeFromName(type);
+    }
+
+    public void GetUnitColor()
+    {
+        string layer = LayerMask.LayerToName(gameObject.layer);
+        unitColor = gameInfo.GetUnitColor(layer);
+    }
+
+    public void ActionWait()
+    {
+        if (isMoved)
+        {
+            this.GetComponent<SpriteRenderer>().color = Color.gray;
+        }
     }
 
     private int GetUnitMoveRange()
@@ -44,5 +64,10 @@ public class Unit : MonoBehaviour
     private int GetUnitPassability()
     {
         return gameInfo.unitPassability[(int)unitType];
+    }
+
+    public Vector2Int GetUnitPos()
+    {
+        return this.GetComponent<MapElement>().GetUnitPos();
     }
 }

@@ -32,6 +32,10 @@ public class MapElement : MonoBehaviour
         //animator.Play("Blue_Infantry_Idle");
     }
 
+    public Vector2Int GetUnitPos()
+    {
+        return new Vector2Int(this.x_pos, this.y_pos);
+    }
     //Not working
     private void CheckMoveDirection(Vector3 targetPosition)
     {
@@ -88,8 +92,8 @@ public class MapElement : MonoBehaviour
     {
         Transform t = transform;
         Vector3 pos = t.position;
-        int x_pos = (int)pos.x;
-        int y_pos = (int)pos.y;
+        x_pos = (int)pos.x;
+        y_pos = (int)pos.y;
         gridMap.SetUnit(this, x_pos, y_pos);
     }
 

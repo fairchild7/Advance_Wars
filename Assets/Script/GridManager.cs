@@ -119,4 +119,20 @@ public class GridManager : MonoBehaviour
         }
         return tilemapdata;
     }
+
+    public void RefreshUnit()
+    {
+        for (int x = 0; x < grid.width; x++)
+        {
+            for (int y = 0; y < grid.height; y++)
+            {
+                Unit unit = GetUnit(x, y);
+                if (unit != null)
+                {
+                    unit.isMoved = false;
+                    unit.GetComponent<SpriteRenderer>().color = unit.originalColor;
+                }
+            }
+        }
+    }
 }
