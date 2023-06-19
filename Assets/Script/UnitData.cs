@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class GameInformation
+public class UnitData
 {
     private Dictionary<string, UnitType> objectToUnit = new Dictionary<string, UnitType>
     {
@@ -18,9 +18,6 @@ public class GameInformation
         { "RedUnit", UnitColor.Red },
         { "BlueUnit", UnitColor.Blue }
     };
-
-    //Defense value of environments
-    public int[] defenseValue = new int[] { 0, 0, 1, 2, 3, 4 };
 
     //Damage value of units to units, for example, if an Infantry attacks an Infantry, damage will be damageValue[0,0] = 55%
     public int[,] damageValue = new int[,] { { 55, 45, 5, 15, 12}, 
@@ -38,19 +35,8 @@ public class GameInformation
     if equal, it means unit can move but slowly
     if more, it means unit can't move
     */
-    public int[] environmentPassability = new int[] { 3, 1, 3, 3, 1, 3 };
     public int[] unitPassability = new int[] { 1, 0, 2, 2, 2 };
 
-    
-    public enum Environment
-    {
-        road,
-        river,
-        grass,
-        tree,
-        mountain,
-        building,
-    }
     public enum UnitType
     {
         Infantry,

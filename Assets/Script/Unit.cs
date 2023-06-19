@@ -13,13 +13,13 @@ public class Unit : MonoBehaviour
 
     public Color originalColor;
     SpriteRenderer spriteHp;
-    GameInformation gameInfo;
-    public GameInformation.UnitType unitType;
-    public GameInformation.UnitColor unitColor;
+    UnitData gameInfo;
+    public UnitData.UnitType unitType;
+    public UnitData.UnitColor unitColor;
 
     private void Awake()
     {
-        gameInfo = new GameInformation();
+        gameInfo = new UnitData();
         GetUnitType();
         GetUnitColor();
         moveDistance = GetUnitMoveRange();

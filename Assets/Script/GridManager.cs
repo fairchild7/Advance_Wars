@@ -113,7 +113,8 @@ public class GridManager : MonoBehaviour
             for (int y = 0; y < size_y; y++)
             {
                 TileBase tileBase = tilemap.GetTile(new Vector3Int(x, y, 0));
-                int indexTile = tileSet.tiles.FindIndex(x => x == tileBase);
+                //something wrong?
+                int indexTile = tileSet.tiles.FindIndex(index => index == tileBase);
                 tilemapdata[x, y] = indexTile;
             }
         }

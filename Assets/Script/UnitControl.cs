@@ -13,15 +13,27 @@ public class UnitControl : MonoBehaviour
     [SerializeField] GridManager gridManager;
     [SerializeField] GameObject buttonFire;
     [SerializeField] GameObject buttonWait;
+    [SerializeField] GameObject buttonCapture;
     [SerializeField] GameObject buttonCancel;
- 
+    [SerializeField] GameObject buttonEnd;
+    [SerializeField] UnitPanel unitPanel;
+    [SerializeField] EnvironmentPanel environmentPanel;
+
     PathFinding pathFinding;
     Unit selectedUnit;
     Vector3Int clickPosition;
+    Tile tile;
     
     private void Awake()
     {
-        pathFinding = targetTilemap.GetComponent<PathFinding>();    
+        pathFinding = targetTilemap.GetComponent<PathFinding>();
+        buttonFire.SetActive(false);
+        buttonWait.SetActive(false);
+        buttonCapture.SetActive(false);
+        buttonCancel.SetActive(false);
+        buttonEnd.SetActive(false);
+        HideUnitPanel();
+        HideEnvironmentPanel();
     }
 
     private void Update()
@@ -99,6 +111,12 @@ public class UnitControl : MonoBehaviour
         
         if (Input.GetMouseButtonDown(0))
         {
+            ClearHighlightMap();
+            if (!CheckClickPos())
+            {
+                return;
+            }
+            ShowEnvironmentPanel(clickPosition.x, clickPosition.y);
             //Case 1: Nothing is selected
             if (selectedUnit == null)
             {
@@ -107,6 +125,7 @@ public class UnitControl : MonoBehaviour
                 //Case 1.1: There is an unit being selected after click
                 if (selectedUnit != null)
                 {
+                    ShowUnitPanel();
                     //Case 1.1.1: If moved,
                     if (selectedUnit.isMoved)
                     {
@@ -121,29 +140,17 @@ public class UnitControl : MonoBehaviour
                 //Case 1.2: Nothing is selected after click
                 else if (selectedUnit == null)
                 {
-                    if (gridManager.CheckPosition(clickPosition.x, clickPosition.y) == false)
-                    {
-                        return;
-                    }
-                    else
-                    {
-                        Debug.Log(gridManager.GetTerrainType(clickPosition.x, clickPosition.y));
-                    }
+                    HideUnitPanel();
                 }
             }
             //Case 2: There is an unit being selected
             else if (selectedUnit != null)
             {
-                //Checking clickPos
-                ClearHighlightMap();
-                if (gridManager.CheckPosition(clickPosition.x, clickPosition.y) == false)
-                {
-                    return;
-                }
                 //Case 2.1: There is new unit at clickPos, select it
                 if (gridManager.GetUnit(clickPosition.x, clickPosition.y) != null)
                 {
                     SelectUnitAtClickPos();
+                    ShowUnitPanel();
                     //Case 2.1.1: If new unit moved
                     if (selectedUnit.isMoved)
                     {
@@ -155,24 +162,33 @@ public class UnitControl : MonoBehaviour
                         DrawMoveRange();
                     }
                 }
-                //Case 2.2: No unit at clickPos, move current selected unit
+                //Case 2.2: No unit at clickPos
                 else
                 {
-                    MoveOnClick();
-                    AfterMoving();
-                    Deselect();
+                    //Case 2.2.1: Unit selected moved
+                    if (selectedUnit.isMoved)
+                    {
+                        HideUnitPanel();
+                    }
+                    //Case 2.2.2: Unit selected is not moved, move it
+                    else
+                    {
+                        MoveOnClick();
+                        AfterMoving();
+                        Deselect();
+                    }
                 }
             }
         }
     }
 
+    private bool CheckClickPos()
+    {
+        return gridManager.CheckPosition(clickPosition.x, clickPosition.y);
+    }
+
     private void SelectUnitAtClickPos()
     {
-        ClearHighlightMap();
-        if (gridManager.CheckPosition(clickPosition.x, clickPosition.y) == false)
-        {
-            return;
-        }
         selectedUnit = gridManager.GetUnit(clickPosition.x, clickPosition.y);
     }
 
@@ -295,5 +311,32 @@ public class UnitControl : MonoBehaviour
     {
         selectedUnit = null;
         pathFinding.Clear();
+    }
+
+    private void ShowUnitPanel()
+    {
+        unitPanel.gameObject.SetActive(true);
+        unitPanel.UpdateUnitPanel(selectedUnit);
+    }
+
+    private void HideUnitPanel()
+    {
+        unitPanel.gameObject.SetActive(false);
+    }
+
+    private TerrainType GetTileType(int x, int y)
+    {
+        return gridManager.GetTerrainType(x, y);
+    }
+
+    private void ShowEnvironmentPanel(int x, int y)
+    {
+        environmentPanel.gameObject.SetActive(true);
+        environmentPanel.UpdateEnvironmentPanel(GetTileType(x, y));
+    }
+
+    private void HideEnvironmentPanel()
+    {
+        environmentPanel.gameObject.SetActive(false);
     }
 }
