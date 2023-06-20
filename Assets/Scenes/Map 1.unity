@@ -1050,15 +1050,43 @@ Tilemap:
   m_Enabled: 1
   m_Tiles: {}
   m_AnimatedTiles: {}
-  m_TileAssetArray: []
-  m_TileSpriteArray: []
-  m_TileMatrixArray: []
-  m_TileColorArray: []
+  m_TileAssetArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileSpriteArray:
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  - m_RefCount: 0
+    m_Data: {fileID: 0}
+  m_TileMatrixArray:
+  - m_RefCount: 0
+    m_Data:
+      e00: 0
+      e01: 0
+      e02: 2.1006438e-19
+      e03: 2.1006438e-19
+      e10: 0
+      e11: 0
+      e12: 1.041e-42
+      e13: 1.041e-42
+      e20: 2.2437882e+24
+      e21: 1e-45
+      e22: -2.2857503e-19
+      e23: -3.7300853e+19
+      e30: 4.5905e-41
+      e31: 0
+      e32: 1.041e-42
+      e33: 1.044e-42
+  m_TileColorArray:
+  - m_RefCount: 0
+    m_Data: {r: 1.368e-41, g: 1.368e-41, b: 1.368e-41, a: 1.368e-41}
   m_TileObjectToInstantiateArray: []
   m_AnimationFrameRate: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Origin: {x: 0, y: 0, z: 0}
-  m_Size: {x: 0, y: 0, z: 1}
+  m_Size: {x: 12, y: 9, z: 1}
   m_TileAnchor: {x: 0.5, y: 0.5, z: 0}
   m_TileOrientation: 0
   m_TileOrientationMatrix:
@@ -1422,8 +1450,8 @@ Tilemap:
   - first: {x: 9, y: 0, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 17
+      m_TileSpriteIndex: 17
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1432,8 +1460,8 @@ Tilemap:
   - first: {x: 10, y: 0, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 17
+      m_TileSpriteIndex: 17
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -1512,8 +1540,8 @@ Tilemap:
   - first: {x: 3, y: 1, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 17
+      m_TileSpriteIndex: 17
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2492,8 +2520,8 @@ Tilemap:
   - first: {x: 11, y: 7, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 17
+      m_TileSpriteIndex: 17
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2572,8 +2600,8 @@ Tilemap:
   - first: {x: 4, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 17
+      m_TileSpriteIndex: 17
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2582,8 +2610,8 @@ Tilemap:
   - first: {x: 5, y: 8, z: 0}
     second:
       serializedVersion: 2
-      m_TileIndex: 0
-      m_TileSpriteIndex: 0
+      m_TileIndex: 17
+      m_TileSpriteIndex: 17
       m_TileMatrixIndex: 0
       m_TileColorIndex: 0
       m_TileObjectToInstantiateIndex: 65535
@@ -2831,7 +2859,7 @@ Tilemap:
       m_AllTileFlags: 1073741825
   m_AnimatedTiles: {}
   m_TileAssetArray:
-  - m_RefCount: 74
+  - m_RefCount: 68
     m_Data: {fileID: 11400000, guid: e6a3eef35c4f62b41ab52bcd69647a84, type: 2}
   - m_RefCount: 12
     m_Data: {fileID: 11400000, guid: 352103d4fc2059d47b94bd30bc9546d7, type: 2}
@@ -2865,8 +2893,10 @@ Tilemap:
     m_Data: {fileID: 11400000, guid: 989737ab939a6bd45bb5731ea47b8ddb, type: 2}
   - m_RefCount: 1
     m_Data: {fileID: 11400000, guid: 8651fc5366cab7c46885126e5c5ae7d0, type: 2}
+  - m_RefCount: 6
+    m_Data: {fileID: 11400000, guid: 93c8bd5d6a514b447a25f71c31322607, type: 2}
   m_TileSpriteArray:
-  - m_RefCount: 74
+  - m_RefCount: 68
     m_Data: {fileID: 1983149562, guid: 6c7f695916425654a8e9041113a16b24, type: 3}
   - m_RefCount: 12
     m_Data: {fileID: 360192261, guid: 6c7f695916425654a8e9041113a16b24, type: 3}
@@ -2900,6 +2930,8 @@ Tilemap:
     m_Data: {fileID: 453399350, guid: 6c72acbe33aa49042b337cb6b7faf98b, type: 3}
   - m_RefCount: 1
     m_Data: {fileID: 1694747794, guid: 6c72acbe33aa49042b337cb6b7faf98b, type: 3}
+  - m_RefCount: 6
+    m_Data: {fileID: -924669470, guid: 6c72acbe33aa49042b337cb6b7faf98b, type: 3}
   m_TileMatrixArray:
   - m_RefCount: 150
     m_Data:
@@ -3083,7 +3115,19 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 762486573}
   m_OnClick:
     m_PersistentCalls:
-      m_Calls: []
+      m_Calls:
+      - m_Target: {fileID: 1318754446}
+        m_TargetAssemblyTypeName: UnitControl, Assembly-CSharp
+        m_MethodName: EnterFireState
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 1
+        m_CallState: 2
 --- !u!114 &762486573
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3223,6 +3267,18 @@ MonoBehaviour:
       - m_Target: {fileID: 784668302}
         m_TargetAssemblyTypeName: ButtonEnd, Assembly-CSharp
         m_MethodName: EndDay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1318754447}
+        m_TargetAssemblyTypeName: GameController, Assembly-CSharp
+        m_MethodName: StartEnemyTurn
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4480,6 +4536,7 @@ GameObject:
   - component: {fileID: 1318754442}
   - component: {fileID: 1318754445}
   - component: {fileID: 1318754446}
+  - component: {fileID: 1318754447}
   m_Layer: 0
   m_Name: Main Camera
   m_TagString: MainCamera
@@ -4588,11 +4645,27 @@ MonoBehaviour:
   gridManager: {fileID: 583265961}
   buttonFire: {fileID: 762486570}
   buttonWait: {fileID: 880244559}
-  buttonCapture: {fileID: 0}
+  buttonCapture: {fileID: 969315628}
   buttonCancel: {fileID: 1143724510}
-  buttonEnd: {fileID: 0}
+  buttonEnd: {fileID: 784668300}
   unitPanel: {fileID: 810766697}
   environmentPanel: {fileID: 323554301}
+--- !u!114 &1318754447
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1318754441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4045e014132b1894e82ee7e6995ec608, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  textDay: {fileID: 1501269834}
+  textCurrentColor: {fileID: 1910427291}
+  unitControl: {fileID: 1318754446}
+  isPlayerTurn: 0
 --- !u!1001 &1463956488
 PrefabInstance:
   m_ObjectHideFlags: 0

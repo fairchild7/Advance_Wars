@@ -13,7 +13,7 @@ public class EnvironmentPanel : MonoBehaviour
 
     EnvironmentData eData;
 
-    private void Start()
+    private void Awake()
     {
         eData = new EnvironmentData();
     }

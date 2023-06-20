@@ -6,6 +6,8 @@ using UnityEngine.Tilemaps;
 
 public class UnitControl : MonoBehaviour
 {
+    private bool fireState = false;
+
     [SerializeField] Tilemap targetTilemap;
     [SerializeField] Tilemap highlightTilemap;
     [SerializeField] GameObject highlightPrefab;
@@ -20,6 +22,7 @@ public class UnitControl : MonoBehaviour
     [SerializeField] EnvironmentPanel environmentPanel;
 
     PathFinding pathFinding;
+    GameController gameController;
     Unit selectedUnit;
     Vector3Int clickPosition;
     Tile tile;
@@ -27,76 +30,23 @@ public class UnitControl : MonoBehaviour
     private void Awake()
     {
         pathFinding = targetTilemap.GetComponent<PathFinding>();
-        buttonFire.SetActive(false);
-        buttonWait.SetActive(false);
-        buttonCapture.SetActive(false);
-        buttonCancel.SetActive(false);
-        buttonEnd.SetActive(false);
+        gameController = gameObject.GetComponent<GameController>();
+        HideButton();
         HideUnitPanel();
         HideEnvironmentPanel();
     }
 
     private void Update()
     {
-        MouseInput();
-    }
-
-    /*
-    private void MouseInput()
-    {
-        Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        clickPosition = targetTilemap.WorldToCell(worldPoint);
-        if (Input.GetMouseButtonDown(1))
+        if (gameController.isPlayerTurn)
         {
-            highlightTilemap.ClearAllTiles();
-            if (gridManager.CheckPosition(clickPosition.x, clickPosition.y) == false)
-            {
-                return;
-            }
-            selectedUnit = gridManager.GetUnit(clickPosition.x, clickPosition.y);
-
-            if (selectedUnit != null)
-            {
-                List<PathNode> toHighlight = new List<PathNode>();
-                pathFinding.Clear();
-                pathFinding.CalculateWalkableTerrain(clickPosition.x, clickPosition.y, selectedUnit.moveDistance, ref toHighlight);
-
-                for (int i = 0; i < toHighlight.Count; i++)
-                {
-                    highlightTilemap.SetTile(new Vector3Int(toHighlight[i].xPos, toHighlight[i].yPos, 0), highlightTile);
-                }
-            }
+            MouseInput();
         }
-
-        if (Input.GetMouseButtonDown(0))
+        else
         {
-            Debug.Log("Left " + clickPosition.x + " " + clickPosition.y);
-            if (selectedUnit == null)
-            {
-                return;
-            }
-            highlightTilemap.ClearAllTiles();
-
-            Debug.Log(selectedUnit.unitType);
-            List<PathNode> path = pathFinding.TrackBackPath(selectedUnit, clickPosition.x, clickPosition.y);
-
-            if (path != null)
-            {
-                path.Reverse();
-                if (path.Count > 0)
-                {
-                    for (int i = 0; i < path.Count; i++)
-                    {
-                        highlightTilemap.SetTile(new Vector3Int(path[i].xPos, path[i].yPos, 0), highlightTile);
-                        selectedUnit.GetComponent<MapElement>().MoveUnit(path[i].xPos, path[i].yPos);
-                    }          
-                }
-                Deselect();
-            }
-            highlightTilemap.ClearAllTiles();
+            MouseInputInfo();
         }
     }
-    */
 
     public void ActionWait()
     {
@@ -111,75 +61,129 @@ public class UnitControl : MonoBehaviour
         
         if (Input.GetMouseButtonDown(0))
         {
-            ClearHighlightMap();
+            if (fireState)
+            {
+                Debug.Log("Now fire");
+                FireOnClick();
+            }
+            else
+            {
+                ClearHighlightMap();
+                if (!CheckClickPos())
+                {
+                    return;
+                }
+                ShowEnvironmentPanel(clickPosition.x, clickPosition.y);
+                //Case 1: Nothing is selected
+                if (selectedUnit == null)
+                {
+                    //Try selecting unit at click position
+                    SelectUnitAtClickPos();
+                    //Case 1.1: There is an unit being selected after click
+                    if (selectedUnit != null)
+                    {
+                        ShowUnitPanel();
+                        //Case 1.1.1: If moved,
+                        if (selectedUnit.isMoved)
+                        {
+                            Debug.Log(selectedUnit.name + " moved");
+                        }
+                        //Case 1.1.2: If not moved, draw move range
+                        else
+                        {
+                            DrawMoveRange();
+                        }
+                    }
+                    //Case 1.2: Nothing is selected after click
+                    else if (selectedUnit == null)
+                    {
+                        HideUnitPanel();
+                    }
+                }
+                //Case 2: There is an unit being selected
+                else if (selectedUnit != null)
+                {
+                    //Case 2.1: There is new unit at clickPos, select it
+                    if (gridManager.GetUnit(clickPosition.x, clickPosition.y) != null)
+                    {
+                        SelectUnitAtClickPos();
+                        ShowUnitPanel();
+                        //Case 2.1.1: If new unit moved
+                        if (selectedUnit.isMoved)
+                        {
+                            Debug.Log(selectedUnit.name + " moved");
+                        }
+                        //Case 2.1.2: If not moved, draw move range
+                        else
+                        {
+                            DrawMoveRange();
+                        }
+                    }
+                    //Case 2.2: No unit at clickPos
+                    else
+                    {
+                        //Case 2.2.1: Unit selected moved
+                        if (selectedUnit.isMoved)
+                        {
+                            HideUnitPanel();
+                        }
+                        //Case 2.2.2: Unit selected is not moved, move it
+                        else
+                        {
+                            MoveOnClick();
+                            AfterMoving();
+                            //Deselect();
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    private void MouseInputInfo()
+    {
+        Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
+        clickPosition = targetTilemap.WorldToCell(worldPoint);
+        
+        if (Input.GetMouseButtonDown(0))
+        {
             if (!CheckClickPos())
             {
                 return;
             }
             ShowEnvironmentPanel(clickPosition.x, clickPosition.y);
-            //Case 1: Nothing is selected
-            if (selectedUnit == null)
+            SelectUnitAtClickPos();
+            if (selectedUnit != null)
             {
-                //Try selecting unit at click position
-                SelectUnitAtClickPos();
-                //Case 1.1: There is an unit being selected after click
-                if (selectedUnit != null)
-                {
-                    ShowUnitPanel();
-                    //Case 1.1.1: If moved,
-                    if (selectedUnit.isMoved)
-                    {
-                        Debug.Log(selectedUnit.name + " moved");
-                    }
-                    //Case 1.1.2: If not moved, draw move range
-                    else
-                    {
-                        DrawMoveRange();
-                    }
-                }
-                //Case 1.2: Nothing is selected after click
-                else if (selectedUnit == null)
-                {
-                    HideUnitPanel();
-                }
+                ShowUnitPanel();
             }
-            //Case 2: There is an unit being selected
-            else if (selectedUnit != null)
+            else
             {
-                //Case 2.1: There is new unit at clickPos, select it
-                if (gridManager.GetUnit(clickPosition.x, clickPosition.y) != null)
-                {
-                    SelectUnitAtClickPos();
-                    ShowUnitPanel();
-                    //Case 2.1.1: If new unit moved
-                    if (selectedUnit.isMoved)
-                    {
-                        Debug.Log(selectedUnit.name + " moved");
-                    }
-                    //Case 2.1.2: If not moved, draw move range
-                    else
-                    {
-                        DrawMoveRange();
-                    }
-                }
-                //Case 2.2: No unit at clickPos
-                else
-                {
-                    //Case 2.2.1: Unit selected moved
-                    if (selectedUnit.isMoved)
-                    {
-                        HideUnitPanel();
-                    }
-                    //Case 2.2.2: Unit selected is not moved, move it
-                    else
-                    {
-                        MoveOnClick();
-                        AfterMoving();
-                        Deselect();
-                    }
-                }
+                HideUnitPanel();
             }
         }
+    }
+
+    private void FireOnClick()
+    {
+        List<Unit> attackableEnemy = CheckEnemy(GetAttackList());
+
+        foreach (Unit enemy in attackableEnemy)
+        {
+            Vector2Int enemyPos = enemy.GetUnitPos();
+            if (new Vector2Int(clickPosition.x, clickPosition.y) == enemyPos)
+            {
+                Debug.Log(enemy.name);
+                fireState = false;
+                buttonFire.SetActive(false);
+                ClearHighlightMap();
+                Deselect();
+            }
+            else
+            {
+                //Debug.Log("Wrong click");
+            }
+        }  
     }
 
     private bool CheckClickPos()
@@ -290,12 +294,13 @@ public class UnitControl : MonoBehaviour
         {
             buttonFire.SetActive(true);
         }
+        /*
         foreach (Unit enemy in attackableEnemy)
         {
             Vector2Int enemyPos = enemy.GetUnitPos();
-            //highlightTilemap.SetTile(new Vector3Int(enemyPos.x, enemyPos.y, 0), attackTile);
             Instantiate(attackPrefab, new Vector3(enemyPos.x + 0.5f, enemyPos.y + 0.5f, 0), Quaternion.identity);
         }
+        */
     }
 
     private void ClearHighlightMap()
@@ -338,5 +343,25 @@ public class UnitControl : MonoBehaviour
     private void HideEnvironmentPanel()
     {
         environmentPanel.gameObject.SetActive(false);
+    }
+
+    private void HideButton()
+    {
+        buttonFire.SetActive(false);
+        buttonWait.SetActive(false);
+        buttonCapture.SetActive(false);
+        buttonCancel.SetActive(false);
+    }
+
+    public void EnterFireState()
+    {
+        fireState = true;
+        List<Unit> attackableEnemy = CheckEnemy(GetAttackList());
+
+        foreach (Unit enemy in attackableEnemy)
+        {
+            Vector2Int enemyPos = enemy.GetUnitPos();
+            Instantiate(attackPrefab, new Vector3(enemyPos.x + 0.5f, enemyPos.y + 0.5f, 0), Quaternion.identity);
+        }
     }
 }
