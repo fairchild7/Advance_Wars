@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 8458797079449119053}
   - component: {fileID: 8458797079449119056}
   - component: {fileID: 8458797079449119065}
+  - component: {fileID: 63306211001394922}
   m_Layer: 8
   m_Name: Blue_Infantry
   m_TagString: Infantry
@@ -124,8 +125,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c7998fd582e10e1469311e9da7562041, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDistance: 3
   Name: 
+  moveDistance: 3
+  attackRange: 0
+  unitPassability: 0
+  isMoved: 0
+  isSelected: 0
+  originalColor: {r: 0, g: 0, b: 0, a: 0}
+  unitType: 0
+  unitColor: 0
 --- !u!114 &8458797079449119056
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -151,6 +159,32 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fdc46e26cb8965d48b087f9edf6a6232, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!61 &63306211001394922
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8458797079449119054}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0, y: 0, z: 0, w: 0}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.875, y: 0.9375}
+    newSize: {x: 0.875, y: 0.9375}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.875, y: 0.9375}
+  m_EdgeRadius: 0
 --- !u!1 &8458797080086669358
 GameObject:
   m_ObjectHideFlags: 0
