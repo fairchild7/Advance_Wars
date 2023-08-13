@@ -69,7 +69,18 @@ public class PathFinding : MonoBehaviour
         }
     }
 
-    public void CalculateWalkableTerrain(int startX, int startY, int range, ref List<PathNode> toHighlight)
+    public PathNode[,] GetPathNodes()
+    {
+        return pathNodes;
+    }
+
+    public void CalculateWalkableTerrain(int startX, int startY, Unit unit, ref List<PathNode> toHighlight)
+    {
+        int range = unit.moveDistance;
+        CalculateWalkableTerrain(startX, startY, range, unit, ref toHighlight);
+    }
+
+    public void CalculateWalkableTerrain(int startX, int startY, int range, Unit unit, ref List<PathNode> toHighlight)
     {
         range *= 10;
 
@@ -121,7 +132,7 @@ public class PathFinding : MonoBehaviour
                 }
                 */
                 //This is where terrain affects
-                float moveCost = CalculateDistance(currentNode, neighbourNodes[i]) * TerrainMultiplicator(neighbourNodes[i]);
+                float moveCost = CalculateDistance(currentNode, neighbourNodes[i]) * TerrainMultiplicator(neighbourNodes[i], unit);
                 float totalMoveCost = currentNode.gValue + moveCost;
 
                 if (totalMoveCost > range)
@@ -147,20 +158,48 @@ public class PathFinding : MonoBehaviour
         }
     }
 
-    private float TerrainMultiplicator(PathNode pathNode)
+    private float TerrainMultiplicator(PathNode pathNode, Unit unit)
     {
-        switch (pathNode.terrainType)
+        Unit unitOnPath = gridMap.GetUnit(pathNode.xPos, pathNode.yPos);
+        if (unitOnPath != null && (unitOnPath.GetUnitColor() != unit.GetUnitColor()))
         {
-            case TerrainType.Grass:
-                return 1f;
-            case TerrainType.Road:
-                return 1f;
-            case TerrainType.Tree:
-                return 2f;
-            case TerrainType.River:
-                return 3f;
-            case TerrainType.Mountain:
-                return 3f;
+            return 999f;
+        }
+        if (unit.unitType == UnitData.UnitType.Infantry)
+        {
+            switch (pathNode.terrainType)
+            {
+                case TerrainType.Grass:
+                    return 1f;
+                case TerrainType.Road:
+                    return 1f;
+                case TerrainType.Tree:
+                    return 2f;
+                case TerrainType.River:
+                    return 3f;
+                case TerrainType.Mountain:
+                    return 3f;
+            }
+        }
+        else if (unit.unitType == UnitData.UnitType.Artillery)
+        {
+            return 1f;
+        }
+        else
+        {
+            switch (pathNode.terrainType)
+            {
+                case TerrainType.Grass:
+                    return 1f;
+                case TerrainType.Road:
+                    return 1f;
+                case TerrainType.Tree:
+                    return 2f;
+                case TerrainType.River:
+                    return 999f;
+                case TerrainType.Mountain:
+                    return 999f;
+            }
         }
         return 1f;
     }

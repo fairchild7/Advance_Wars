@@ -64,21 +64,4 @@ public class MapData : ScriptableObject
             }
         }
     }
-
-    //Trying to save mapData - still not work
-    public void SaveMapData(int[,] map, string mapName)
-    {
-        MapData mapData = CreateInstance<MapData>();
-        string mapDataName = "Assets/MapData/" + mapName + ".asset";
-        mapData.width = map.GetLength(0);
-        mapData.height = map.GetLength(1);
-        for (int x = 0; x < width; x++)
-        {
-            for (int y = 0; y < height; y++)
-            {
-                mapData.map.Add(map[x, y]);
-            }
-        }
-        AssetDatabase.CreateAsset(mapData, mapDataName);  
-    }
 }

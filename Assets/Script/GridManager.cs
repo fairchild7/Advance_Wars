@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class GridManager : MonoBehaviour
+public class GridManager : SimpleSingleton<GridManager>
 {
     Tilemap tilemap;
     GridMap grid;
@@ -135,5 +135,10 @@ public class GridManager : MonoBehaviour
                 }
             }
         }
+    }
+
+    public GridMap GetGridMap()
+    {
+        return grid;
     }
 }

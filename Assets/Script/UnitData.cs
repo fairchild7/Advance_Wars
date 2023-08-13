@@ -4,6 +4,19 @@ using UnityEngine;
 
 public class UnitData
 {
+    private static UnitData instance;
+    public static UnitData Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = new UnitData();
+            }
+            return instance;
+        }
+    }
+
     private Dictionary<string, UnitType> objectToUnit = new Dictionary<string, UnitType>
     {
         { "Infantry", UnitType.Infantry },
@@ -29,13 +42,6 @@ public class UnitData
     public int[] attackRange = new int[] { 1, 1, 1, 3, 1 };
     //Move range of units
     public int[] moveRange = new int[] { 3, 2, 6, 5, 8 };
-
-    /*Passability of environments and units, 
-    if unit has passability less than environments, it means unit can move through environment
-    if equal, it means unit can move but slowly
-    if more, it means unit can't move
-    */
-    public int[] unitPassability = new int[] { 1, 0, 2, 2, 2 };
 
     public enum UnitType
     {
