@@ -4,203 +4,134 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Tilemaps;
 
-public class UnitControl : MonoBehaviour
+public class UnitControl : SimpleSingleton<UnitControl>
 {
-    private bool fireState = false;
+    public Tilemap targetTilemap;
+    public Tilemap highlightTilemap;
+    public GameObject highlightPrefab;
+    public GameObject attackPrefab;
+    public GridManager gridManager;
 
-    [SerializeField] Tilemap targetTilemap;
-    [SerializeField] Tilemap highlightTilemap;
-    [SerializeField] GameObject highlightPrefab;
-    [SerializeField] GameObject attackPrefab;
-    [SerializeField] GridManager gridManager;
-    [SerializeField] GameObject buttonFire;
-    [SerializeField] GameObject buttonWait;
-    [SerializeField] GameObject buttonCapture;
-    [SerializeField] GameObject buttonCancel;
-    [SerializeField] GameObject buttonEnd;
-    [SerializeField] UnitPanel unitPanel;
-    [SerializeField] EnvironmentPanel environmentPanel;
+    public PathFinding pathFinding;
 
-    PathFinding pathFinding;
-    GameController gameController;
-    Unit selectedUnit;
-    Vector3Int clickPosition;
-    Tile tile;
+    public Unit selectedUnit;
+    public Unit currentUnit;
+    public Vector3 currentUnitPos;
+
+    public Vector3Int clickPosition;
+    public Tile tile;
     
-    private void Awake()
+    public void Awake()
     {
         pathFinding = targetTilemap.GetComponent<PathFinding>();
-        gameController = gameObject.GetComponent<GameController>();
-        HideButton();
-        HideUnitPanel();
-        HideEnvironmentPanel();
     }
 
-    private void Update()
+    public void Update()
     {
-        if (gameController.isPlayerTurn)
+        if (Input.GetMouseButtonDown(1))
         {
-            MouseInput();
-        }
-        else
-        {
-            MouseInputInfo();
+            Debug.Log(GameController.Instance.currentState);
         }
     }
 
     public void ActionWait()
     {
-        selectedUnit.isMoved = true;
-        selectedUnit.ActionWait();
+        ClearHighlightMap();
+        currentUnit.isMoved = true;
+        currentUnit.GetComponent<SpriteRenderer>().color = Color.gray;
+        Deselect();
+        UIGamePlay.Instance.HideAllButtons();
+        GameController.Instance.ChangeState(new FreeState());
     }
 
-    private void MouseInput()
+    public void ActionCapture()
     {
-        Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        clickPosition = targetTilemap.WorldToCell(worldPoint);
-        
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (fireState)
-            {
-                Debug.Log("Now fire");
-                FireOnClick();
-            }
-            else
-            {
-                ClearHighlightMap();
-                if (!CheckClickPos())
-                {
-                    return;
-                }
-                ShowEnvironmentPanel(clickPosition.x, clickPosition.y);
-                //Case 1: Nothing is selected
-                if (selectedUnit == null)
-                {
-                    //Try selecting unit at click position
-                    SelectUnitAtClickPos();
-                    //Case 1.1: There is an unit being selected after click
-                    if (selectedUnit != null)
-                    {
-                        ShowUnitPanel();
-                        //Case 1.1.1: If moved,
-                        if (selectedUnit.isMoved)
-                        {
-                            Debug.Log(selectedUnit.name + " moved");
-                        }
-                        //Case 1.1.2: If not moved, draw move range
-                        else
-                        {
-                            DrawMoveRange();
-                        }
-                    }
-                    //Case 1.2: Nothing is selected after click
-                    else if (selectedUnit == null)
-                    {
-                        HideUnitPanel();
-                    }
-                }
-                //Case 2: There is an unit being selected
-                else if (selectedUnit != null)
-                {
-                    //Case 2.1: There is new unit at clickPos, select it
-                    if (gridManager.GetUnit(clickPosition.x, clickPosition.y) != null)
-                    {
-                        SelectUnitAtClickPos();
-                        ShowUnitPanel();
-                        //Case 2.1.1: If new unit moved
-                        if (selectedUnit.isMoved)
-                        {
-                            Debug.Log(selectedUnit.name + " moved");
-                        }
-                        //Case 2.1.2: If not moved, draw move range
-                        else
-                        {
-                            DrawMoveRange();
-                        }
-                    }
-                    //Case 2.2: No unit at clickPos
-                    else
-                    {
-                        //Case 2.2.1: Unit selected moved
-                        if (selectedUnit.isMoved)
-                        {
-                            HideUnitPanel();
-                        }
-                        //Case 2.2.2: Unit selected is not moved, move it
-                        else
-                        {
-                            MoveOnClick();
-                            AfterMoving();
-                            //Deselect();
-                        }
-                    }
-                }
-            }
-        }
+        Building building = CheckBuilding(currentUnit.transform.position);
+        Capture(currentUnit, building);
+        ActionWait();
     }
 
-    private void MouseInputInfo()
+    public void ActionFire()
     {
-        Vector3 worldPoint = Camera.main.ScreenToWorldPoint(Input.mousePosition);
-        clickPosition = targetTilemap.WorldToCell(worldPoint);
-        
-        if (Input.GetMouseButtonDown(0))
-        {
-            if (!CheckClickPos())
-            {
-                return;
-            }
-            ShowEnvironmentPanel(clickPosition.x, clickPosition.y);
-            SelectUnitAtClickPos();
-            if (selectedUnit != null)
-            {
-                ShowUnitPanel();
-            }
-            else
-            {
-                HideUnitPanel();
-            }
-        }
-    }
+        UIGamePlay.Instance.buttonFire.SetActive(false);
+        GameController.Instance.ChangeState(new FireState());
 
-    private void FireOnClick()
-    {
-        List<Unit> attackableEnemy = CheckEnemy(GetAttackList());
+        List<Unit> attackableEnemy = GetEnemyInRange(GetAttackList(currentUnit, currentUnit.GetUnitPos()), currentUnit);
 
         foreach (Unit enemy in attackableEnemy)
         {
             Vector2Int enemyPos = enemy.GetUnitPos();
-            if (new Vector2Int(clickPosition.x, clickPosition.y) == enemyPos)
-            {
-                Debug.Log(enemy.name);
-                fireState = false;
-                buttonFire.SetActive(false);
-                ClearHighlightMap();
-                Deselect();
-            }
-            else
-            {
-                //Debug.Log("Wrong click");
-            }
-        }  
+            Instantiate(attackPrefab, new Vector3(enemyPos.x + 0.5f, enemyPos.y + 0.5f, 0), Quaternion.identity);
+        }
     }
 
-    private bool CheckClickPos()
+    public void ActionEnd()
     {
-        return gridManager.CheckPosition(clickPosition.x, clickPosition.y);
+        ClearHighlightMap();
+
+        GridManager.Instance.RefreshUnit();
+        UIGamePlay.Instance.buttonEnd.SetActive(false);
+        GameController.Instance.StartEnemyTurn();
+        GameController.Instance.ChangeState(new ViewState());
     }
 
-    private void SelectUnitAtClickPos()
+    public void ActionCancel()
     {
-        selectedUnit = gridManager.GetUnit(clickPosition.x, clickPosition.y);
+        currentUnit.transform.position = currentUnitPos;
+        currentUnit.GetComponent<MapElement>().PlaceObjectOnNewGrid(currentUnitPos);
+        currentUnit.isMoved = false;
+        selectedUnit = null;
+
+        ClearHighlightMap();
+        GameController.Instance.ChangeState(new FreeState());
+        CheckBuilding(currentUnitPos);
     }
 
-    private void DrawMoveRange()
+    public Building CheckBuilding(Vector2 position)
+    {
+        if (selectedUnit != null && (selectedUnit.unitType == UnitData.UnitType.Infantry || selectedUnit.unitType == UnitData.UnitType.Artillery))
+        {
+            List<Building> availableBuilding = new List<Building>();
+            foreach (Building b in GameController.Instance.enemyBuilding)
+            {
+                availableBuilding.Add(b);
+            }
+            foreach (Building b in GameController.Instance.neutralBuilding)
+            {
+                availableBuilding.Add(b);
+            }
+
+            foreach (Building b in availableBuilding)
+            {
+                if (Vector2.Distance(position, b.transform.position) < 0.1f)
+                {
+                    UIGamePlay.Instance.buttonCapture.SetActive(true);
+                    return b;
+                }
+            }
+            UIGamePlay.Instance.buttonCapture.SetActive(false);
+            selectedUnit.GetComponent<CapturableUnit>().StopCapturing();
+            return null;
+        }
+        UIGamePlay.Instance.buttonCapture.SetActive(false);
+        return null;
+    }
+
+    public bool CheckClickPos(int x, int y)
+    {
+        return gridManager.CheckPosition(x, y);
+    }
+
+    public void SelectUnitAtClickPos(int x, int y)
+    {
+        selectedUnit = gridManager.GetUnit(x, y);
+    }
+
+    public void DrawMoveRange(int x, int y)
     {
         List<PathNode> toHighlight = new List<PathNode>();
         pathFinding.Clear();
-        pathFinding.CalculateWalkableTerrain(clickPosition.x, clickPosition.y, selectedUnit.moveDistance, ref toHighlight);
+        pathFinding.CalculateWalkableTerrain(x, y, selectedUnit, ref toHighlight);
 
         for (int i = 0; i < toHighlight.Count; i++)
         {
@@ -209,75 +140,90 @@ public class UnitControl : MonoBehaviour
         }
     }
 
-    private void MoveOnClick()
+    public void MoveOnClick(Unit unit, int x, int y)
     {
-        List<PathNode> path = pathFinding.TrackBackPath(selectedUnit, clickPosition.x, clickPosition.y);
-
+        List<PathNode> path = pathFinding.TrackBackPath(unit, x, y);
         if (path != null)
         {
             path.Reverse();
             if (path.Count > 0)
             {
-                for (int i = 0; i < path.Count; i++)
+                StartCoroutine(unit.GetComponent<MapElement>().MoveOnList(path));
+
+                unit.isMoved = true;
+                if (CheckAllyUnit(unit))
                 {
-                    //highlightTilemap.SetTile(new Vector3Int(path[i].xPos, path[i].yPos, 0), highlightTile);
-                    Instantiate(highlightPrefab, new Vector3(path[i].xPos + 0.5f, path[i].yPos + 0.5f, 0), Quaternion.identity);
-                    selectedUnit.GetComponent<MapElement>().MoveUnit(path[i].xPos, path[i].yPos);
+                    GameController.Instance.RefreshPosition(GameController.Instance.allyUnit);
+                }
+                else
+                {
+                    GameController.Instance.RefreshPosition(GameController.Instance.enemyUnit);
                 }
             }
-            selectedUnit.isMoved = true;
-            ActionWait(); 
+            else if (path.Count == 0)
+            {
+                ClearHighlightMap();
+                Deselect();
+            }
         }
         ClearHighlightMap();
     }
 
-    private List<Vector2Int> GetAttackList()
+    public void MoveOnClick(int x, int y)
     {
-        Vector2Int unitPos = selectedUnit.GetUnitPos();
-        int attackRange = selectedUnit.attackRange;
-        List<Vector2Int> attackList = new List<Vector2Int>();
-        if (attackRange == 1)
-        {
-            for (int x = attackRange * -1; x <= attackRange; x ++)
-            {
-                for (int y = attackRange * -1; y <= attackRange; y++)
-                {
-                    if ((Mathf.Abs(x) + Mathf.Abs(y)) > 0 && (Mathf.Abs(x) + Mathf.Abs(y)) <= attackRange)
-                    {
-                        if (gridManager.CheckPosition(unitPos.x + x, unitPos.y + y) == true)
-                        {
-                            attackList.Add(new Vector2Int(unitPos.x + x, unitPos.y + y));
-                        }
-                    }
-                }
-            }
-        }
-        else if (attackRange >= 1)
-        {
-            for (int x = attackRange * -1; x <= attackRange; x++)
-            {
-                for (int y = attackRange * -1; y <= attackRange; y++)
-                {
-                    if ((Mathf.Abs(x) + Mathf.Abs(y)) > 1 && (Mathf.Abs(x) + Mathf.Abs(y)) <= attackRange)
-                    {
-                        if (gridManager.CheckPosition(unitPos.x + x, unitPos.y + y) == true)
-                        {
-                            attackList.Add(new Vector2Int(unitPos.x + x, unitPos.y + y));
-                        }
-                    }
-                }
-            }
-        }
-        return attackList;
+        MoveOnClick(selectedUnit, x, y);
     }
 
-    private List<Unit> CheckEnemy(List<Vector2Int> attackList)
+    public List<Vector2Int> GetAttackList(Unit unit, Vector2Int unitPos)
+    {
+        if (unit != null)
+        {
+            int attackRange = unit.attackRange;
+            List<Vector2Int> attackList = new List<Vector2Int>();
+            if (attackRange == 1)
+            {
+                for (int x = attackRange * -1; x <= attackRange; x++)
+                {
+                    for (int y = attackRange * -1; y <= attackRange; y++)
+                    {
+                        if ((Mathf.Abs(x) + Mathf.Abs(y)) > 0 && (Mathf.Abs(x) + Mathf.Abs(y)) <= attackRange)
+                        {
+                            if (gridManager.CheckPosition(unitPos.x + x, unitPos.y + y) == true)
+                            {
+                                attackList.Add(new Vector2Int(unitPos.x + x, unitPos.y + y));
+                            }
+                        }
+                    }
+                }
+            }
+            else if (attackRange >= 1)
+            {
+                for (int x = attackRange * -1; x <= attackRange; x++)
+                {
+                    for (int y = attackRange * -1; y <= attackRange; y++)
+                    {
+                        if ((Mathf.Abs(x) + Mathf.Abs(y)) > 1 && (Mathf.Abs(x) + Mathf.Abs(y)) <= attackRange)
+                        {
+                            if (gridManager.CheckPosition(unitPos.x + x, unitPos.y + y) == true)
+                            {
+                                attackList.Add(new Vector2Int(unitPos.x + x, unitPos.y + y));
+                            }
+                        }
+                    }
+                }
+            }
+            return attackList;
+        }
+        return null;
+    }
+
+    public List<Unit> GetEnemyInRange(List<Vector2Int> attackList, Unit unit)
     {
         List<Unit> attackableEnemy = new List<Unit>();
         foreach (Vector2Int pos in attackList)
         {
             Unit otherUnit = gridManager.GetUnit(pos.x, pos.y);
-            if (otherUnit != null && otherUnit.unitColor != selectedUnit.unitColor)
+            if (otherUnit != null && otherUnit.GetUnitColor() != unit.GetUnitColor())
             {
                 attackableEnemy.Add(otherUnit);
             }
@@ -285,25 +231,68 @@ public class UnitControl : MonoBehaviour
         return attackableEnemy;
     }
 
-    private void AfterMoving()
+    public List<PathNode> GetMoveRange(Unit unit)
     {
-        buttonWait.SetActive(true);
-        buttonCancel.SetActive(true);
-        List<Unit> attackableEnemy = CheckEnemy(GetAttackList());
-        if (attackableEnemy.Count > 0)
-        {
-            buttonFire.SetActive(true);
-        }
-        /*
-        foreach (Unit enemy in attackableEnemy)
-        {
-            Vector2Int enemyPos = enemy.GetUnitPos();
-            Instantiate(attackPrefab, new Vector3(enemyPos.x + 0.5f, enemyPos.y + 0.5f, 0), Quaternion.identity);
-        }
-        */
+        List<PathNode> moveRange = new List<PathNode>();
+        pathFinding.Clear();
+        pathFinding.CalculateWalkableTerrain((int)unit.transform.position.x, (int)unit.transform.position.y, unit, ref moveRange);
+        return moveRange;
     }
 
-    private void ClearHighlightMap()
+    public List<PathNode> GetAttackRange(Unit unit)
+    {
+        List<PathNode> moveRange = new List<PathNode>();
+        pathFinding.Clear();
+        pathFinding.CalculateWalkableTerrain((int)unit.transform.position.x, (int)unit.transform.position.y, unit, ref moveRange);
+
+        PathNode[,] pathNodes = pathFinding.GetPathNodes();
+
+        List<PathNode> additionRange = new List<PathNode>();
+        for (int i = 0; i < moveRange.Count; i++)
+        {
+            for (int x = -1; x < 2; x++)
+            {
+                for (int y = -1; y < 2; y++)
+                {
+                    if (x == 0 && y == 0)
+                    {
+                        continue;
+                    }
+                    if (GridManager.Instance.GetGridMap().CheckPosition(moveRange[i].xPos + x, moveRange[i].yPos + y) == false)
+                    {
+                        continue;
+                    }
+                    if (x != 0 && y != 0)
+                    {
+                        continue;
+                    }
+                    if (moveRange.Contains(pathNodes[moveRange[i].xPos + x, moveRange[i].yPos + y]))
+                    {
+                        continue;
+                    }
+                    additionRange.Add(pathNodes[moveRange[i].xPos + x, moveRange[i].yPos + y]);
+                }
+            }
+        }
+
+        for (int i = 0; i < additionRange.Count; i++)
+        {
+            moveRange.Add(additionRange[i]);
+        }
+
+        return moveRange;
+    }
+
+    public void CheckEnemy(Unit unit, Vector2Int unitPos)
+    {
+        List<Unit> attackableEnemy = GetEnemyInRange(GetAttackList(unit, unitPos), unit);
+        if (attackableEnemy.Count > 0)
+        {
+            UIGamePlay.Instance.buttonFire.SetActive(true);
+        }
+    }
+
+    public void ClearHighlightMap()
     {
         GameObject[] highlightPrefabs = GameObject.FindGameObjectsWithTag("Highlight");
         foreach (GameObject prefab in highlightPrefabs)
@@ -312,56 +301,77 @@ public class UnitControl : MonoBehaviour
         }
     }
 
-    private void Deselect()
+    public void Deselect()
     {
         selectedUnit = null;
         pathFinding.Clear();
     }
 
-    private void ShowUnitPanel()
+    public bool CheckAllyUnit(Unit unit)
     {
-        unitPanel.gameObject.SetActive(true);
-        unitPanel.UpdateUnitPanel(selectedUnit);
+        return unit.GetUnitColor() == UnitData.UnitColor.Red;
     }
 
-    private void HideUnitPanel()
+    public void Attack(Unit attackUnit, Unit targetUnit)
     {
-        unitPanel.gameObject.SetActive(false);
-    }
-
-    private TerrainType GetTileType(int x, int y)
-    {
-        return gridManager.GetTerrainType(x, y);
-    }
-
-    private void ShowEnvironmentPanel(int x, int y)
-    {
-        environmentPanel.gameObject.SetActive(true);
-        environmentPanel.UpdateEnvironmentPanel(GetTileType(x, y));
-    }
-
-    private void HideEnvironmentPanel()
-    {
-        environmentPanel.gameObject.SetActive(false);
-    }
-
-    private void HideButton()
-    {
-        buttonFire.SetActive(false);
-        buttonWait.SetActive(false);
-        buttonCapture.SetActive(false);
-        buttonCancel.SetActive(false);
-    }
-
-    public void EnterFireState()
-    {
-        fireState = true;
-        List<Unit> attackableEnemy = CheckEnemy(GetAttackList());
-
-        foreach (Unit enemy in attackableEnemy)
+        targetUnit.GetDamage(GameController.Instance.GetDamage(attackUnit, targetUnit));
+        Debug.Log("Damage: " + GameController.Instance.GetDamage(attackUnit, targetUnit));
+        if (attackUnit.attackRange == 1 && targetUnit.attackRange == 1)
         {
-            Vector2Int enemyPos = enemy.GetUnitPos();
-            Instantiate(attackPrefab, new Vector3(enemyPos.x + 0.5f, enemyPos.y + 0.5f, 0), Quaternion.identity);
+            float damageBack = GameController.Instance.GetDamage(targetUnit, attackUnit);
+            if (damageBack < 0f)
+            {
+                return;
+            }
+            Debug.Log("Damage back: " + damageBack);
+            attackUnit.GetDamage(damageBack);  
         }
+    }
+
+    public void Capture(Unit unit, Building building)
+    {
+        unit.GetComponent<CapturableUnit>().Capturing();
+        building.GetDamage(Mathf.RoundToInt(unit.GetHp() / 10f));
+        if (building.GetHp() <= 0)
+        {
+            building.ChangeColor(unit.GetUnitColor());
+            unit.GetComponent<CapturableUnit>().StopCapturing();
+        }
+    }
+
+    public bool IsHealing(Unit unit)
+    {
+        switch (unit.GetUnitColor())
+        {
+            case UnitData.UnitColor.Red:
+                {
+                    foreach (Building b in GameController.Instance.allyBuilding)
+                    {
+                        if (b != null)
+                        {
+                            if (Vector2.Distance(unit.transform.position, b.transform.position) < 0.1f)
+                            {
+                                return true;
+                            }
+                        }
+                    }
+                    return false;
+                }
+            case UnitData.UnitColor.Blue:
+                {
+                    foreach (Building b in GameController.Instance.enemyBuilding)
+                    {
+                        if (b != null)
+                        {
+                            if (Vector2.Distance(unit.transform.position, b.transform.position) < 0.1f)
+                            {
+                                return true;
+                            }
+                        }
+                    }
+                    return false;
+                }
+        }
+        return false;
     }
 }

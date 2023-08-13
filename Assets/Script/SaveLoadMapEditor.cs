@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using UnityEditor;
 using UnityEngine;
 
-[CustomEditor(typeof(SaveLoadMap))]
-public class SaveLoadMapEditor : Editor
+public class SaveLoadMapEditor
 {
+    /*
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
@@ -23,4 +23,5 @@ public class SaveLoadMapEditor : Editor
         }
         EditorUtility.SetDirty(target);
     }
+    */
 }

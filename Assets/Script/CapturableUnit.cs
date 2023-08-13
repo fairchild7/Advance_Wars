@@ -11,4 +11,14 @@ public class CapturableUnit : MonoBehaviour
         spriteCapt = transform.GetChild(1).GetComponent<SpriteRenderer>();
         spriteCapt.gameObject.SetActive(false);
     }
+
+    public void Capturing()
+    {
+        spriteCapt.gameObject.SetActive(true);
+    }
+
+    public void StopCapturing()
+    {
+        spriteCapt.gameObject.SetActive(false);
+    }
 }

@@ -10,6 +10,9 @@ TagManager:
   - Cannon
   - Recon
   - Highlight
+  - Building
+  - City
+  - HQ
   layers:
   - Default
   - TransparentFX
@@ -20,7 +23,7 @@ TagManager:
   - Raycast
   - RedUnit
   - BlueUnit
-  - 
+  - NeutralUnit
   - 
   - 
   - 

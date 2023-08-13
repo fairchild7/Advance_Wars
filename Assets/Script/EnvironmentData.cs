@@ -4,14 +4,20 @@ using UnityEngine;
 
 public class EnvironmentData
 {
+    private static EnvironmentData instance;
+    public static EnvironmentData Instance
+    {
+        get
+        {
+            if (instance == null)
+            {
+                instance = new EnvironmentData();
+            }
+            return instance;
+        }
+    }
+
     //Defense value of environments
     public int[] defenseValue = new int[] { 1, 0, 2, 0, 3, 4 };
-
-    /*Passability of environments and units, 
-    if unit has passability less than environments, it means unit can move through environment
-    if equal, it means unit can move but slowly
-    if more, it means unit can't move
-    */
-    public int[] environmentPassability = new int[] { 3, 3, 3, 1, 1, 3 };
 }
 
