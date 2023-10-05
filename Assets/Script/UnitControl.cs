@@ -290,6 +290,10 @@ public class UnitControl : SimpleSingleton<UnitControl>
         {
             UIGamePlay.Instance.buttonFire.SetActive(true);
         }
+        else
+        {
+            UIGamePlay.Instance.buttonFire.SetActive(false);
+        }
     }
 
     public void ClearHighlightMap()

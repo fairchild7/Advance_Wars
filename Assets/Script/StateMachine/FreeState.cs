@@ -119,7 +119,7 @@ public class FreeState : IState
                             UIGamePlay.Instance.buttonWait.SetActive(true);
 
                             UnitControl.Instance.CheckBuilding(new Vector2(clickPosition.x + 0.5f, clickPosition.y + 0.5f));
-                            UnitControl.Instance.CheckEnemy(UnitControl.Instance.selectedUnit, new Vector2Int(clickPosition.x, clickPosition.y));
+                            UnitControl.Instance.CheckEnemy(UnitControl.Instance.selectedUnit, UnitControl.Instance.selectedUnit.GetUnitPos());
 
                             UIGamePlay.Instance.buttonCancel.SetActive(true);
                             GameController.Instance.ChangeState(new SelectState());

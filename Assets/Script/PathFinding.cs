@@ -336,7 +336,7 @@ public class PathFinding : MonoBehaviour
     {
         int distX = Mathf.Abs(current.xPos - target.xPos);
         int distY = Mathf.Abs(current.yPos - target.yPos);
-
+        
         if (distX > distY)
         {
             return 14 * distY + 10 * (distX - distY);
